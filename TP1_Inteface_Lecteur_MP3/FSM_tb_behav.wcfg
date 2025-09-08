@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="FSM_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="FSM_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="650.000 ns"></ZoomEndTime>
+      <Cursor1Time time="0.005 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="213"></NameColumnWidth>
+      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/FSM_tb/RESET" type="logic">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/CLOCK" type="logic">
+      <obj_property name="ElementShortName">CLOCK</obj_property>
+      <obj_property name="ObjectShortName">CLOCK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/B_UP" type="logic">
+      <obj_property name="ElementShortName">B_UP</obj_property>
+      <obj_property name="ObjectShortName">B_UP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/B_DOWN" type="logic">
+      <obj_property name="ElementShortName">B_DOWN</obj_property>
+      <obj_property name="ObjectShortName">B_DOWN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/B_CENTER" type="logic">
+      <obj_property name="ElementShortName">B_CENTER</obj_property>
+      <obj_property name="ObjectShortName">B_CENTER</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/B_LEFT" type="logic">
+      <obj_property name="ElementShortName">B_LEFT</obj_property>
+      <obj_property name="ObjectShortName">B_LEFT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/B_RIGHT" type="logic">
+      <obj_property name="ElementShortName">B_RIGHT</obj_property>
+      <obj_property name="ObjectShortName">B_RIGHT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/PLAY_PAUSE" type="logic">
+      <obj_property name="ElementShortName">PLAY_PAUSE</obj_property>
+      <obj_property name="ObjectShortName">PLAY_PAUSE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/RESTART" type="logic">
+      <obj_property name="ElementShortName">RESTART</obj_property>
+      <obj_property name="ObjectShortName">RESTART</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/FORWARD" type="logic">
+      <obj_property name="ElementShortName">FORWARD</obj_property>
+      <obj_property name="ObjectShortName">FORWARD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/VOLUME_UP" type="logic">
+      <obj_property name="ElementShortName">VOLUME_UP</obj_property>
+      <obj_property name="ObjectShortName">VOLUME_UP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/VOLUME_DW" type="logic">
+      <obj_property name="ElementShortName">VOLUME_DW</obj_property>
+      <obj_property name="ObjectShortName">VOLUME_DW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/stop_the_clock" type="other">
+      <obj_property name="ElementShortName">stop_the_clock</obj_property>
+      <obj_property name="ObjectShortName">stop_the_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/clock_period" type="other">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSM_tb/uut/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+</wave_config>
