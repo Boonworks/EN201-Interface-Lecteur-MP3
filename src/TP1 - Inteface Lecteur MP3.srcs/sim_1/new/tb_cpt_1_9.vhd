@@ -46,10 +46,10 @@ end process;
 
 stimulus: process
 begin
-	raz <= '1' , '0' after 5 ns;
+	raz <='0', '1' after clock_period * 2 , '0' after CLOCK_period * 4;
 
     -- 2
-    v_up <= '1'; wait for CLOCK_period;
+    v_up <= '1'; wait for CLOCK_period * 6;
     v_up <= '0'; wait for CLOCK_period * 5;
     --3
     v_up <= '1'; wait for CLOCK_period;
@@ -57,12 +57,6 @@ begin
   
 
     v_up <= '1' ; v_dw <= '1'; wait for CLOCK_period *5;
-
-    
-    
-
-    
-
 
 end process;
 
