@@ -17,28 +17,24 @@ begin
 
     cpt_tirage_register: process(clock,raz)
     begin
-        if(raz='1') then
-            cpt1_9 <= to_unsigned(1,4);
-
-        elsif(clock'event and clock ='1') then
-
-            if (v_up='1')  and (v_dw = '0')then
-                if(cpt1_9 >= "1001") then
-                    cpt1_9 <= cpt1_9;
+        if(clock'event and clock ='1') then
+            if(raz = '0') then
+                s_count_val <= "0001";
+            elsif(v_up = '1' and v_dw = '1') then
+                 s_count_val <= s_count_val;
+            elsif(v_up = '1') then
+                if(s_count_val = "1001") then
+                    s_count_val <= s_count_val;
                 else
-                    cpt1_9 <= cpt1_9 + 1;
+                    s_count_val <= s_count_val + 1;
                 end if;
-
-
-            elsif (v_up='0') and (v_dw ='1')then
-                if(cpt1_9 <= "0001") then
-                    cpt1_9 <= cpt1_9;
+            elsif(v_dw = '1') then
+                if(s_count_val = "0001") then
+                    s_count_val <= s_count_val;
                 else
-                    cpt1_9 <= cpt1_9  - 1;
+                    s_count_val <= s_count_val - 1;
                 end if;
-            else null;
             end if;
-
         end if;
     end process cpt_tirage_register;
 

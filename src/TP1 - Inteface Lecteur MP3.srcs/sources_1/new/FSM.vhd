@@ -108,12 +108,4 @@ PROCESS (current_state, B_UP, B_DOWN)
         END CASE;
 END PROCESS;
 
-
-
-
-
-
-
-
-
 END Behavioral;

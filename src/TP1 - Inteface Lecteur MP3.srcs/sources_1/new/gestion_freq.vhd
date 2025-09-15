@@ -3,55 +3,44 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity gestion_freq is
-    Port ( raz : in STD_LOGIC;
-           horloge : in STD_LOGIC;
-
-           CE_perception: out STD_LOGIC;
-           CE_affichage: out STD_LOGIC);
+    Port (  clock:            in std_logic;
+            raz :             in std_logic;
+            CE_affichage:     out std_logic;
+            CE_perception :   out std_logic);
 end gestion_freq;
 
 architecture Behavioral of gestion_freq is
-
-signal compt_affichage : unsigned(16 downto 0) := (others => '0');
-signal compt_perception : unsigned(24 downto 0) := (others => '0');
-
+    signal count_perc : unsigned(15 downto 0) := (others => '0');
+    signal count_aff  : unsigned(23 downto 0) := (others => '0');
 begin
+    upd_aff : process(clock, raz, count_aff)
+    begin
+      if(clock'event and clock = '1') then
+        if(raz = '0') then
+          count_aff <= (others => '0');
+        elsif(count_aff = "100110001001011010000000") then
+          count_aff <= (others => '0');
+          CE_affichage <= '1';
+        else
+          count_aff <= count_aff + 1;
+          CE_affichage <= '0';
+        end if;
+      end if;
+    end process;
 
-
-   compteur_1: process(horloge, raz)
-   begin
-     if(raz='1') then
-        compt_affichage <= (others => '0');
-     elsif(horloge'event and horloge ='1') then
-                compt_affichage <= compt_affichage + 1;
+    upd_perc : process(clock, raz, count_perc)
+    begin
+        if(clock'event and clock = '1') then
+            if(raz = '0') then
+                count_perc <= (others => '0');
+            elsif(count_perc = "1000001000110101") then
+                count_perc <= (others => '0');
+                CE_perception <= '1';
+            else
+                count_perc <= count_perc + 1;
+                CE_perception <= '0';
             end if;
-   end process compteur_1;
+        end if;
+    end process;
 
-   CE_aff: process(compt_affichage)
-   begin
-     if(compt_affichage=to_unsigned(33333,17)) then
-        CE_perception <= '1';
-     else
-        CE_perception <= '0';
-            end if;
-   end process CE_aff;
-
-   compteur_2: process(horloge, raz)
-   begin
-     if(raz='1') then
-        compt_perception <= (others => '0');
-     elsif(horloge'event and horloge ='1') then
-                compt_perception <= compt_perception + 1;
-            end if;
-   end process compteur_2;
-
-   CE_incr: process(compt_perception)
-   begin
-     if(compt_perception=to_unsigned(100000000,25)) then
-        CE_affichage <= '1';
-     else
-        CE_affichage <= '0';
-            end if;
-   end process CE_incr;
-
-end architecture Behavioral;
+end Behavioral;
