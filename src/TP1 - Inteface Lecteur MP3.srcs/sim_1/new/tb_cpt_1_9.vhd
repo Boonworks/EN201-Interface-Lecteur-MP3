@@ -54,11 +54,10 @@ begin
     --3
     v_up <= '1'; wait for CLOCK_period;
     v_up <= '0'; wait for CLOCK_period * 5;
-  
+
 
     v_up <= '1' ; v_dw <= '1'; wait for CLOCK_period *5;
 
 end process;
 
 end;
-  

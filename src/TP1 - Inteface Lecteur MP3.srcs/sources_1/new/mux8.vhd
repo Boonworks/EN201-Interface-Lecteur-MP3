@@ -41,5 +41,5 @@ process(commande)
             when others =>
                 sept_seg <= "000000";    
        end case;
-   end process;
+   end process;   
 end Behavioral;

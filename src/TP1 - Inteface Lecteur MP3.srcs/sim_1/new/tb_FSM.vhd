@@ -74,7 +74,7 @@ begin
     -- ON PASSE DANS L'ETAT PLAY FWD
     B_CENTER <= '1'; wait for CLOCK_period;
     B_CENTER <= '0'; wait for CLOCK_period * 9;
-    
+
     -- ON PASSE DANS L'ETAT PAUSE
     B_CENTER <= '1'; wait for CLOCK_period;
     B_CENTER <= '0'; wait for CLOCK_period * 9;
@@ -82,7 +82,7 @@ begin
     -- ON PASSE DANS PLAY BWD
     B_LEFT <= '1'; wait for CLOCK_period;
     B_LEFT <= '0'; wait for CLOCK_period * 9;
-    
+
     -- ON PASSE DANS PAUSE
     B_CENTER <= '1'; wait for CLOCK_period;
     B_CENTER <= '0'; wait for CLOCK_period * 9;
@@ -94,7 +94,7 @@ begin
     -- on PASSE DANS PLAT FWD
     B_CENTER <= '1'; wait for CLOCK_period;
     B_CENTER <= '0'; wait for CLOCK_period * 9;
-    
+
     stop_the_clock <= true;
     wait;
 end process;
@@ -102,4 +102,3 @@ end process;
 
 
 end;
-  
