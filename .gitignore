@@ -1,10 +1,11 @@
 pdf/
 simulation/
 
-src/TP1 - Inteface Lecteur MP3.cache
-src/TP1 - Inteface Lecteur MP3.hw
-src/TP1 - Inteface Lecteur MP3.ip_user_files
-src/TP1 - Inteface Lecteur MP3.sim
+src/TP1 - Inteface Lecteur MP3.cache/
+src/TP1 - Inteface Lecteur MP3.hw/
+src/TP1 - Inteface Lecteur MP3.ip_user_files/
+src/TP1 - Inteface Lecteur MP3.runs/
+src/TP1 - Inteface Lecteur MP3.sim/
 src/TP1 - Inteface Lecteur MP3.xpr
 src/TP1 - Inteface Lecteur MP3.srcs/sim_1/new/
 

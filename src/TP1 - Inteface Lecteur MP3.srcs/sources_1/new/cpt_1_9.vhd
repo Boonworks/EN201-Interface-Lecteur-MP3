@@ -11,7 +11,7 @@ end entity cpt_1_9;
 
 architecture Behavioral of cpt_1_9 is
 
-signal cpt1_9 : unsigned(3 downto 0) := ("0001");
+signal s_count_val : unsigned(3 downto 0) := ("0001");
 
 begin
 
@@ -38,6 +38,6 @@ begin
         end if;
     end process cpt_tirage_register;
 
-out_cpt1_9 <= std_logic_vector(cpt1_9);
+out_cpt1_9 <= std_logic_vector(s_count_val);
 
 end architecture Behavioral;

@@ -154,15 +154,15 @@ P_Calcul_S_diz: process (val_diz)
 begin
 	case val_diz is
     when to_unsigned(0,4) => S_diz <= "0000001"; --0
-    when to_unsigned(1,4) => S_diz  <= "1001111"; --1
-    when to_unsigned(2,4) => S_diz  <= "0010010"; --2
-    when to_unsigned(3,4) => S_diz  <= "0000110"; --3
-    when to_unsigned(4,4) => S_diz  <= "1001100"; --4
-    when to_unsigned(5,4) => S_diz  <= "0100100"; --5
-    when to_unsigned(6,4) => S_diz  <= "0100000"; --6
-    when to_unsigned(7,4) => S_diz  <= "0001111"; --7
-    when to_unsigned(8,4) => S_diz  <= "0000000"; --8
-    when others            => S_diz  <= "0000100"; --9
+    when to_unsigned(1,4) => S_diz <= "1001111"; --1
+    when to_unsigned(2,4) => S_diz <= "0010010"; --2
+    when to_unsigned(3,4) => S_diz <= "0000110"; --3
+    when to_unsigned(4,4) => S_diz <= "1001100"; --4
+    when to_unsigned(5,4) => S_diz <= "0100100"; --5
+    when to_unsigned(6,4) => S_diz <= "0100000"; --6
+    when to_unsigned(7,4) => S_diz <= "0001111"; --7
+    when to_unsigned(8,4) => S_diz <= "0000000"; --8
+    when others           => S_diz <= "0000100"; --9
   end case;
 end Process;
 
@@ -179,7 +179,7 @@ begin
     when to_unsigned(6,10) => S_uni <= "0100000"; --6
     when to_unsigned(7,10) => S_uni <= "0001111"; --7
     when to_unsigned(8,10) => S_uni <= "0000000"; --8
-    when others => S_uni <= "0000100"; --
+    when others            => S_uni <= "0000100"; --9
   end case;
 end Process;
 
