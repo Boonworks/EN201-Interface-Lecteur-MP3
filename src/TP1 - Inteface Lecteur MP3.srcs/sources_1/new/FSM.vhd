@@ -19,7 +19,7 @@ PORT (
         FORWARD : OUT STD_LOGIC;
         VOLUME_UP : OUT STD_LOGIC;
         VOLUME_DW : OUT STD_LOGIC);
-END fsm;
+END FSM;
 
 
 
@@ -31,7 +31,7 @@ TYPE STATE_TYPE IS (init, play_fwd, play_bwd, pause, stop);
     SIGNAL next_state : STATE_TYPE;
 BEGIN
 
-PROCESS (CLOCK)
+PROCESS (CLOCK,raz)
     BEGIN
         IF (CLOCK'EVENT AND CLOCK = '1') THEN
             IF raz = '1' THEN

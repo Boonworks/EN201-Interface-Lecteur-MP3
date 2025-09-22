@@ -4,19 +4,19 @@ use IEEE.numeric_std.all;
 
 entity transcodeur is
   port (
-	  nb_binaire     : in   STD_LOGIC_VECTOR(9 downto 0);
-	  nb_binaire_vol : in   STD_LOGIC_VECTOR(3 downto 0);
-	  PLAY_PAUSE     : in   std_logic;
-    RESTART        : in   std_logic;
-    FORWARD        : in   std_logic;
-    sortie1        : out  std_logic_vector(6 downto 0);
-    sortie2        : out  std_logic_vector(6 downto 0);
-    sortie3        : out  std_logic_vector(6 downto 0);
-    sortie4        : out  std_logic_vector(6 downto 0);
-    S_uni_vol      : out  STD_LOGIC_VECTOR (6 downto 0);
-    S_uni          : out  STD_LOGIC_VECTOR (6 downto 0);
-    S_diz          : out  STD_LOGIC_VECTOR (6 downto 0);
-    S_cent         : out  STD_LOGIC_VECTOR (6 downto 0)
+	   nb_binaire     : in   STD_LOGIC_VECTOR(9 downto 0);
+	   nb_binaire_vol : in   STD_LOGIC_VECTOR(3 downto 0);
+	   PLAY_PAUSE     : in   std_logic;
+       RESTART        : in   std_logic;
+       FORWARD        : in   std_logic;
+       sortie1        : out  std_logic_vector(6 downto 0);
+       sortie2        : out  std_logic_vector(6 downto 0);
+       sortie3        : out  std_logic_vector(6 downto 0);
+       sortie4        : out  std_logic_vector(6 downto 0);
+       S_uni_vol      : out  STD_LOGIC_VECTOR (6 downto 0);
+       S_uni          : out  STD_LOGIC_VECTOR (6 downto 0);
+       S_diz          : out  STD_LOGIC_VECTOR (6 downto 0);
+       S_cent         : out  STD_LOGIC_VECTOR (6 downto 0)
   );
 end transcodeur;
 
