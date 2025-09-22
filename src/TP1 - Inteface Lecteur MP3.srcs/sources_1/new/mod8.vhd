@@ -16,7 +16,7 @@ begin
     upd_count : process(clock, raz, s_count_val)
     begin
         if(clock'event and clock = '1') then
-            if(raz = '0') then
+            if(raz = '1') then
                 s_count_val <= (others => '0');
             elsif(CE_perception = '1') then
                 if(s_count_val = "111") then
@@ -31,14 +31,14 @@ begin
     upd_AN : process(s_count_val)
     begin
         case s_count_val is
-            when "000" => AN <= "11111110"; --1
-            when "001" => AN <= "11111101"; --2
-            when "010" => AN <= "11111011"; --3
-            when "011" => AN <= "11110111"; --4
-            when "100" => AN <= "11101111"; --5
-            when "101" => AN <= "11011111"; --6
-            when "110" => AN <= "10111111"; --7
-            when others => AN <= "01111111"; --8
+            when "000" => AN <=   "11111110"; --1
+            when "001" => AN <=   "11111101"; --2
+            when "010" => AN <=   "11111011"; --3
+            when "011" => AN <=   "11110111"; --4
+            when "100" => AN <=   "11101111"; --5
+            when "101" => AN <=   "11011111"; --6
+            when "110" => AN <=   "10111111"; --7
+            when others => AN <=  "01111111"; --8
          end case;
      end process;
 

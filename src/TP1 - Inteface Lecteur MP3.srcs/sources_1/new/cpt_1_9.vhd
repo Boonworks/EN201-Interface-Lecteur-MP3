@@ -18,7 +18,7 @@ begin
     cpt_tirage_register: process(clock,raz)
     begin
         if(clock'event and clock ='1') then
-            if(raz = '0') then
+            if(raz = '1') then
                 s_count_val <= "0001";
             elsif(v_up = '1' and v_dw = '1') then
                  s_count_val <= s_count_val;

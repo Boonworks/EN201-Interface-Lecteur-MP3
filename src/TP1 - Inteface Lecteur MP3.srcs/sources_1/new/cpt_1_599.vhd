@@ -18,7 +18,7 @@ begin
     compteur_1_599 : process(clock, raz, CE_affichage, s_count_val)
     begin
         if(clock'event and clock = '1') then
-            if(raz = '0' or init = '1') then
+            if(raz = '1' or init = '1') then
                 s_count_val <= "0000000001";
             elsif(CE_affichage = '1') then
                 if(incr = '1' and decr = '1') then

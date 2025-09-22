@@ -13,11 +13,12 @@ architecture Behavioral of gestion_freq is
     signal count_perc : unsigned(15 downto 0) := (others => '0');
     signal count_aff  : unsigned(23 downto 0) := (others => '0');
 begin
-    upd_aff : process(clock, raz, count_aff)
+    upd_aff : process(clock)
     begin
       if(clock'event and clock = '1') then
-        if(raz = '0') then
+        if(raz = '1') then
           count_aff <= (others => '0');
+          CE_affichage <= '0';
         elsif(count_aff = "100110001001011010000000") then
           count_aff <= (others => '0');
           CE_affichage <= '1';
@@ -28,11 +29,12 @@ begin
       end if;
     end process;
 
-    upd_perc : process(clock, raz, count_perc)
+    upd_perc : process(clock)
     begin
         if(clock'event and clock = '1') then
-            if(raz = '0') then
+            if(raz = '1') then
                 count_perc <= (others => '0');
+                CE_perception <='0';
             elsif(count_perc = "1000001000110101") then
                 count_perc <= (others => '0');
                 CE_perception <= '1';

@@ -127,11 +127,6 @@ architecture Behavioral of top_level_mp3 is
                 sept_seg :  out STD_LOGIC_VECTOR(6 downto 0));
     end component mux8;
 
-
-
-
-
-
 begin
 
     Reg_B_Center : detec_impulsion port map (
@@ -179,7 +174,7 @@ begin
         volume_dw => volume_dw
     );
 
-    Gestion_Horloge : gestion_freq port map (
+    gestion_horloge : gestion_freq port map (
         clock => clock,
         raz => raz,
         CE_affichage => ce_affichage,
@@ -204,7 +199,7 @@ begin
         output => nb_binaire
     );
 
-    Trans : transcodeur port map (
+    trans : transcodeur port map (
         forward => forward,
         play_pause => play_pause,
         restart => restart,
@@ -222,7 +217,7 @@ begin
         sortie4 =>    v7
     );
 
-    Modulo8 : mod8 port map (
+    modulo8 : mod8 port map (
         clock => clock,
         raz => raz,
         ce_perception => ce_perception,
@@ -230,7 +225,7 @@ begin
         commande => commande
     );
 
-    Multiplex8 : mux8 port map (
+    multiplex8 : mux8 port map (
         val_0 => v0,
         val_1 => v1,
         val_2 => v2,
@@ -243,6 +238,5 @@ begin
         DP => DP,
         sept_seg => sept_seg
     );
-
 
 end Behavioral;
