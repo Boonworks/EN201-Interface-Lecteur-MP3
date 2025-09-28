@@ -18,7 +18,7 @@ end mux8;
 
 architecture Behavioral of mux8 is
 begin
-process(commande)
+process(commande,val_0, val_1, val_2, val_3, val_4, val_5, val_6, val_7)
     begin
         case commande IS
           when "000" => sept_seg <= val_0;  dp <= '0';

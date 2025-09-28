@@ -13,7 +13,7 @@ end mod8;
 architecture Behavioral of mod8 is
     signal s_count_val : unsigned(2 downto 0) := (others => '0');
 begin
-    upd_count : process(clock, raz, s_count_val)
+    upd_count : process(clock)
     begin
         if(clock'event and clock = '1') then
             if(raz = '1') then

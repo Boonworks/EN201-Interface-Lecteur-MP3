@@ -9,7 +9,7 @@ end detec_impulsion;
 architecture Behavioral of detec_impulsion is
     signal s_temp : std_logic := '0';
 begin
-    calc_output : process(clock, input)
+    calc_output : process(clock)
     begin
         if(clock'event and clock = '1') then
             s_temp <= input;
