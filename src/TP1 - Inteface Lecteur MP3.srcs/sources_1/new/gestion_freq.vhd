@@ -6,12 +6,15 @@ entity gestion_freq is
     Port (  clock:            in std_logic;
             raz :             in std_logic;
             CE_affichage:     out std_logic;
-            CE_perception :   out std_logic);
+            CE_perception :   out std_logic;
+            CE            :   out std_logic);
 end gestion_freq;
 
 architecture Behavioral of gestion_freq is
     signal count_perc : unsigned(15 downto 0) := (others => '0');
     signal count_aff  : unsigned(23 downto 0) := (others => '0');
+    signal count      : unsigned(11 downto 0) := (others => '0');
+
 begin
     upd_aff : process(clock)
     begin
@@ -41,6 +44,21 @@ begin
             else
                 count_perc <= count_perc + 1;
                 CE_perception <= '0';
+            end if;
+        end if;
+    end process;
+
+    upd_ce : process(clock, raz, count)
+    begin
+        if(clock'event and clock = '1') then
+            if(raz = '1') then
+                count <= (others => '0');
+            elsif(count = "100011011100") then
+                count <= (others => '0');
+                ce <= '1';
+            else
+                count <= count + 1;
+                ce <= '0';
             end if;
         end if;
     end process;
